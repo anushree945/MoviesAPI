@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  moviesdb:
+    container_name: moviesdb
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+        - 14331:14331
+    environment:
+        - ACCEPT_EULA=Y
+        - MSSQL_SA_PASSWORD=P@ssw0rd
+
+  moviesapi:
+    container_name: moviesapi
+    image: ${DOCKER_REGISTRY-}moviesapi
+    build:
+      context: .
+      dockerfile: MoviesAPI/Dockerfile
+    ports:
+        - 45960:80
+        - 45960:443
+    depends_on:
+        - moviesdb
