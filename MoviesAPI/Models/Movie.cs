@@ -17,13 +17,13 @@ namespace MoviesAPI.Models
         /// Title of the movie
         /// </summary>
         [Required]
-        public string Title { get; set; }
+        public string T { get; set; }
 
         /// <summary>
         /// Genre of the movie
         /// </summary>
         [Required]
-        public string Genre { get; set; }
+        public string G { get; set; }
 
         /// <summary>
         /// Year when the movie was released

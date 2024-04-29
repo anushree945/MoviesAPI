@@ -29,36 +29,36 @@ namespace MoviesAPI.DbContexts
             modelBuilder.Entity<Movie>().HasData(new Movie
             {
                 Id = 1,
-                Title = "Mr. India",
-                Genre = "Fantasy",
+                T = "Mr. India",
+                G = "Fantasy",
                 ReleaseYear = 1988
             });
             modelBuilder.Entity<Movie>().HasData(new Movie
             {
                 Id = 2,
-                Title = "Golmaal",
-                Genre = "Comedy",
+                T = "Golmaal",
+                G = "Comedy",
                 ReleaseYear = 2005
             });
             modelBuilder.Entity<Movie>().HasData(new Movie
             {
                 Id = 3,
-                Title = "Swades",
-                Genre = "Drama",
+                T = "Swades",
+                G = "Drama",
                 ReleaseYear = 2003
             });
             modelBuilder.Entity<Movie>().HasData(new Movie
             {
                 Id = 4,
-                Title = "A Wednesday",
-                Genre = "Thriller",
+                T = "A Wednesday",
+                G = "Thriller",
                 ReleaseYear = 2008
             });
             modelBuilder.Entity<Movie>().HasData(new Movie
             {
                 Id = 5,
-                Title = "Bhool Bhulaiyaa",
-                Genre = "Comedy",
+                T = "Bhool Bhulaiyaa",
+                G = "Comedy",
                 ReleaseYear = 2007
             });
         }

@@ -29,7 +29,7 @@ namespace MoviesAPI.Respository
         public async Task<IEnumerable<MovieDto>> GetMovieByGenre(string genre)
         {
             var movies = await _context.Movie
-                .Where(p => p.Genre.ToLower() == genre.ToLower())
+                .Where(p => p.G.ToLower() == genre.ToLower())
                 .ToListAsync();
             return _mapper.Map<IEnumerable<MovieDto>>(movies);
         }
